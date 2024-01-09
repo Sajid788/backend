@@ -59,14 +59,6 @@ const getAllProduct = async (req, res) => {
             const products = await ProductModel.find();
             return res.status(201).json({message: "Successfully get all products", products})
         }
-        // const resultPerPage = 8;
-        // const productsCount = await ProductModel.countDocuments();
-
-        // const apiFeature = new Features(ProductModel.find(), req.query).search().filter();
-        // let products = await apiFeature.query;
-        // let filteredProductsCount = products.length;
-        // apiFeature.pagination(resultPerPage);
-        // products = await apiFeature.query;
 
         return res.status(200).json({
             message: "Successfully get all products",
